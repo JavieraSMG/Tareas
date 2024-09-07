@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "cl.bootcamp.e7m5"
+    namespace = "cl.bootcamp.e8m5"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "cl.bootcamp.e7m5"
+        applicationId = "cl.bootcamp.e8m5"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -66,5 +66,4 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation(kotlin("script-runtime"))
 }
