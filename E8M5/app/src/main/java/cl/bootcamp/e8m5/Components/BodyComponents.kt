@@ -106,11 +106,11 @@ fun ImageFromDisk() {
 fun setText(estado: Boolean): String {
 
     if (estado ) {
-        var res = "Mostrar Lista"
+        val res = "Mostrar Lista"
         return res
 
     } else {
-        var res = "Ocultar Lista"
+        val res = "Ocultar Lista"
         return res
 
     }
