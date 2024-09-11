@@ -50,9 +50,9 @@ fun InputBox(
 }
 
 @Composable
-fun MainButton() {
+fun MainButton(onClick: () -> Unit ) {
     Button(
-        onClick = { /*TODO*/ },
+        onClick = onClick,
         modifier = Modifier
             .fillMaxWidth()
             .padding(25.dp),
@@ -97,43 +97,20 @@ fun SegmentedButtonSelect() {
     }
 }
 
+//EJERCICIO 10
+@Composable
+fun ResultText(result: Double) {
+    Text(
+        text = result.toString(),
+        fontSize = 50.sp,
+        fontWeight = FontWeight.SemiBold
+    )
+}
+
+fun calculateBMI(weight: Double, height: Double): Double {
+    val imc=weight / (height/100 * height/100)
+    return kotlin.math.round(imc*10)/10.0
+}
 
 
 
-
-//@Composable
-//fun SegmentedButton(
-//
-//val options = listOf("Favorites", "Trending", "Saved")
-//val icons =
-//    listOf(
-//        Icons.Filled.FavoriteBorder,
-//        Icons.Filled.Star,
-//        Icons.Filled.AccountBox
-//    )
-//MultiChoiceSegmentedButtonRow {
-//    options.forEachIndexed { index, label ->
-//        SegmentedButton(
-//            shape = SegmentedButtonDefaults.itemShape(index = index, count = options.size),
-//            icon = {
-//                SegmentedButtonDefaults.Icon(active = index in checkedList) {
-//                    Icon(
-//                        imageVector = icons[index],
-//                        contentDescription = null,
-//                        modifier = Modifier.size(SegmentedButtonDefaults.IconSize)
-//                    )
-//                }
-//            },
-//            onCheckedChange = {
-//                if (index in checkedList) {
-//                    checkedList.remove(index)
-//                } else {
-//                    checkedList.add(index)
-//                }
-//            },
-//            checked = index in checkedList
-//        ) {
-//            Text(label)
-//        }
-//    }
-//}
